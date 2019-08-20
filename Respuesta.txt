@@ -14,4 +14,17 @@
 
 4)¿Qué pasa cuando este programa se ejecuta?, ¿Puede usted usar gdb para encontrar problemas como este?,
  ¿Que dice acerca de Valgrind (de nuevo use este con la bandera --leak check=yes)?
-    R//
+    R//Cuando se ejecuta el programa simplemente haciendo ./malloc no se lanza ningun
+    tipo de error.
+    Al hacer uso del gdb solo nos dice que el programa se ejecutó correctamente, y nos manda el pid, con lo cual
+    no es suficiente información para encontrar problemas como este.
+    Con el uso del Valgrind podemos identificar el problema, ya que nos brinda información suficiente sobre el uso
+    del heap ademas de un leak summary que nos permite ver la perdida de memoria, ya que reservamos memoria con 
+    el malloc y al final no liberamos esto.
+5)¿Qué pasa cuando este programa se ejecuta?,¿Qué pasa cuando se corre el programa usando valgrind?, ¿El programa es correcto?
+    R//Cuando el programa es ejecutado no ocurre ningun tipo de error.
+    Al hacer uso del valgrind podemos observar que se pierden 400 bytes, ademas lanza un error cuando se intenta escribir 
+    el valor de 0 en la posición 100 ya que no está definida en el tamaño cuando hacemos llamado al malloc.
+6)
+
+
