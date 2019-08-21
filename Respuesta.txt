@@ -24,7 +24,13 @@
 5)¿Qué pasa cuando este programa se ejecuta?,¿Qué pasa cuando se corre el programa usando valgrind?, ¿El programa es correcto?
     R//Cuando el programa es ejecutado no ocurre ningun tipo de error.
     Al hacer uso del valgrind podemos observar que se pierden 400 bytes, ademas lanza un error cuando se intenta escribir 
-    el valor de 0 en la posición 100 ya que no está definida en el tamaño cuando hacemos llamado al malloc.
-6)
+    el valor de 0 en la posición 100 ya que no está definida en el tamaño cuando hacemos llamado al malloc, por lo tanto
+    el programa no está correcto.
+6)¿El programa corre?, ¿Que pasa cuando hace uso de valgrind?
+    R//El programa corre. el valgrind lanza un mensaje de error mostrando que hubo una lectura invalidad y imprime un cero. 
+7)¿Qué pasa?, ¿Ústed necesita herramientas para encontrar este tipo de problemas?
+    R//Al ejecutar este programa, sale en pantalla un error indicando un puntero inválido. 
+    Al utilizar valgrind, se detectan 6 errores, los cuales son generados por el apuntador inválido, pudimos darnos cuenta de 
+    este tipo de error aún sin utilizar esta herramienta. 
 
 
